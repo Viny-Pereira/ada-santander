@@ -1,3 +1,5 @@
+package AULA_1;
+
 import java.util.Scanner;
 
 public class TransformTemperature {
@@ -7,7 +9,7 @@ public class TransformTemperature {
         double temperature = scanner.nextDouble();
         System.out.printf("%.2f °F = %.2f °C", temperature, toCelsius(temperature));
     }
-    public double toCelsius(double temperature){
+    public static double toCelsius(double temperature){
         return 5 * ((temperature-32) / 9);
 
     }
