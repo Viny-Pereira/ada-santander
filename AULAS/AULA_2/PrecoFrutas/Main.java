@@ -1,4 +1,4 @@
-package AULA_2;
+package AULA_2.PrecoFrutas;
 
 import java.util.Scanner;
 
