@@ -1,5 +1,7 @@
 package AULA_3.ReajusteSalarial;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Arrays;
 
 public class Main {
@@ -18,7 +20,13 @@ public class Main {
         }
         System.out.println(percentualAumento);
         salario = (1+percentualAumento+input[1]/100)*input[2];
-        salario = Math.round(salario*100d)/100d;
+        salario = arredondar(salario);
         return salario;
+    }
+
+    public static double arredondar(double numeroDecimal){
+
+        double arredondado = new BigDecimal(numeroDecimal * 100.0 / 100.0).setScale(3, RoundingMode.DOWN).setScale(2, RoundingMode.HALF_DOWN).doubleValue();
+        return arredondado;
     }
 }

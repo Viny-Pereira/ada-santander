@@ -2,7 +2,6 @@ package AULA_3.CustosAutomoveis;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.text.DecimalFormat;
 import java.util.Arrays;
 
 public class Main {
