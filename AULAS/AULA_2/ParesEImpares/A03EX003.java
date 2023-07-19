@@ -2,7 +2,7 @@ package AULA_2.ParesEImpares;
 
 import java.util.Arrays;
 
-public class Main {
+public class A03EX003 {
     public static void main(String[] args) {
         int[] numbers = {1, 5, 3, 6, 0};
         int[] ascending = sortAscendingOrder(numbers);

@@ -2,7 +2,7 @@ package AULA_2.OrdenarNumeros;
 
 import java.util.Arrays;
 
-public class Main {
+public class A02EX002 {
     public static void main(String[] args) {
         int[] numbers = {1, 5, 3, 6, 0};
         int[] ascending = sortAscendingOrder(numbers);

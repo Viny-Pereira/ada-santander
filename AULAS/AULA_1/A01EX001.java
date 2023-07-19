@@ -2,7 +2,7 @@ package AULA_1;
 
 import java.util.Scanner;
 
-public class TransformTemperature {
+public class A01EX001 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o valor da temperatura em Fahrenheit: ");

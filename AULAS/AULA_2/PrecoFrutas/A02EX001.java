@@ -2,7 +2,7 @@ package AULA_2.PrecoFrutas;
 
 import java.util.Scanner;
 
-public class Main {
+public class A02EX001 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int quantidadeTotalFrutas = 0;
