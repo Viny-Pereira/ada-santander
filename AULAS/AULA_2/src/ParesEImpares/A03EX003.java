@@ -1,4 +1,4 @@
-package AULA_2.ParesEImpares;
+package AULA_2.src.ParesEImpares;
 
 import java.util.Arrays;
 

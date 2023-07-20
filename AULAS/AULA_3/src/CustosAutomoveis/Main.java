@@ -1,4 +1,4 @@
-package AULA_3.CustosAutomoveis;
+package AULA_3.src.CustosAutomoveis;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

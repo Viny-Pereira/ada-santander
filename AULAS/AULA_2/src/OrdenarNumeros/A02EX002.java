@@ -1,4 +1,4 @@
-package AULA_2.OrdenarNumeros;
+package AULA_2.src.OrdenarNumeros;
 
 import java.util.Arrays;
 

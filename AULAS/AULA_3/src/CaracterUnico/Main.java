@@ -1,4 +1,4 @@
-package AULA_3.CaracterUnico;
+package AULA_3.src.CaracterUnico;
 
 public class Main {
     public static void main(String[] args) {

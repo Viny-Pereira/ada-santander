@@ -1,4 +1,4 @@
-package AULA_3.CalculoArea;
+package AULA_3.src.CalculoArea;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

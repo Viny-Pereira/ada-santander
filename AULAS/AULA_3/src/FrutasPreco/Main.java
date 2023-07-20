@@ -1,4 +1,4 @@
-package AULA_3.FrutasPreco;
+package AULA_3.src.FrutasPreco;
 
 public class Main {
     public static void main(String[] args) {

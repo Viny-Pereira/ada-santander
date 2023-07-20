@@ -1,8 +1,7 @@
-package AULA_3.ReajusteSalarial;
+package AULA_3.src.ReajusteSalarial;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {

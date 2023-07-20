@@ -1,4 +1,4 @@
-package AULA_3.NumerosUnico;
+package AULA_3.src.NumerosUnico;
 
 public class Main {
     public static void main(String[] args) {
