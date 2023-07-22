@@ -17,7 +17,7 @@ public class Triangulo {
 
     public static void validarTriangulo(int a, int b, int c) throws LadosInvalidosException {
         if (!(a + b > c && b + c > a && c + a > b)) {
-            throw new LadosInvalidosException();
+            throw new LadosInvalidosException("Lados inválidos");
         }
     }
 }
