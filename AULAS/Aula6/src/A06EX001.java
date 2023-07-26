@@ -1,5 +1,7 @@
 package Aula6.src;
 
+import Aula6.enus.Estado;
+
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package Aula6.src.Exemplo;
+package Aula6.enus;
 
 public enum Semana {
     DOMINGO("domingo", 1),
@@ -25,6 +25,15 @@ public enum Semana {
 
     public int getDia(){
         return dia;
+    }
+
+    public static Semana mostrarNomeEnum(String diaDaSemana){
+        for (Semana diaSemana : Semana.values()){
+            if(diaSemana.getName().equalsIgnoreCase(diaDaSemana)){
+                return diaSemana;
+            }
+        }
+        throw new IllegalArgumentException("Dia da semana inválido!!");
     }
 
 }

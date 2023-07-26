@@ -1,4 +1,4 @@
-package Aula6.src;
+package Aula6.enus;
 
 public enum Estado {
     MG("MG", 7),

@@ -1,10 +1,13 @@
 package Aula6.src.Exemplo;
 
+import Aula6.enus.Semana;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println(diaDaSemana("sabado"));
         System.out.println(diaDaSemanaEnum(Semana.SABADO));
         System.out.println(Semana.TERCA_FEIRA.getName());
+
     }
 
     public static int diaDaSemana(String dia) {
