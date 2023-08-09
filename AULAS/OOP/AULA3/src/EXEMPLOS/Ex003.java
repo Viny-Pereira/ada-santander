@@ -7,7 +7,7 @@ public class Ex003 {
         // Modificadores
 
         PessoaFisica pf = new PessoaFisica();
-        pf.nome = "Joao";
+
 
 
     }
