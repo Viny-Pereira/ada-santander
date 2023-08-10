@@ -6,6 +6,14 @@ public class Main {
 
         Moto cb = new Moto("123", "azul", "gol", 2019, 450);
 
+        cb.exibirDados();
 
     }
+
+    public static void aplicarMulta(Veiculo veiculo){
+        System.out.println("Aplicando multa: ");
+        veiculo.exibirDados();
+    }
+
+
 }
