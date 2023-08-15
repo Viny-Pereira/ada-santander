@@ -1,6 +1,6 @@
-package OOP.AULA4.src.EXERCICIO.repository;
+package OOP.AULA4.src.restaurante.repository;
 
-import OOP.AULA4.src.EXERCICIO.entity.Cliente;
+import OOP.AULA4.src.restaurante.entity.Cliente;
 
 import java.util.ArrayList;
 import java.util.List;

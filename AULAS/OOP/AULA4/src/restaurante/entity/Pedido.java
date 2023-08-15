@@ -1,5 +1,6 @@
-package OOP.AULA4.src.EXERCICIO.entity;
+package OOP.AULA4.src.restaurante.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Pedido {
@@ -9,12 +10,14 @@ public class Pedido {
     private Restaurante restaurante;
     private List<Pratos> pratos;
     private String enderecoEntrega;
+    private Cliente cliente;
 
-    public Pedido(int identificadorPedido, Restaurante restaurante, List<Pratos> pratos, String enderecoEntrega) {
-        this.identifcadorPedido = identificadorPedido;
+    public Pedido(Restaurante restaurante, Cliente cliente, String enderecoEntrega) {
+        this.identifcadorPedido = ++ultimoPedido;
         this.restaurante = restaurante;
-        this.pratos = pratos;
+        this.cliente = cliente;
         this.enderecoEntrega = enderecoEntrega;
+        this.pratos = new ArrayList<>();
     }
 
     public static int getUltimoPedido() {
@@ -57,5 +60,11 @@ public class Pedido {
         this.enderecoEntrega = enderecoEntrega;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
 
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 }

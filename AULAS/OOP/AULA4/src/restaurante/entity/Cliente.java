@@ -1,4 +1,4 @@
-package OOP.AULA4.src.EXERCICIO.entity;
+package OOP.AULA4.src.restaurante.entity;
 
 import java.util.Objects;
 

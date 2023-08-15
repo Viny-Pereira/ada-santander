@@ -1,6 +1,6 @@
-package OOP.AULA4.src.EXERCICIO.repository;
+package OOP.AULA4.src.restaurante.repository;
 
-import OOP.AULA4.src.EXERCICIO.entity.Pratos;
+import OOP.AULA4.src.restaurante.entity.Pratos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,4 +29,5 @@ public class PratosRepository {
     public List<Pratos> listarPratos(){
         return new ArrayList<>(pratosRepository);
     }
+
 }

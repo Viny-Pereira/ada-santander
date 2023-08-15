@@ -1,4 +1,4 @@
-package OOP.AULA4.src.EXERCICIO.entity;
+package OOP.AULA4.src.restaurante.entity;
 
 public class Pratos {
     private static int ultimoPrato = 0;
