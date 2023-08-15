@@ -1,16 +1,27 @@
-package OOP.AULA4.src.EXERCICIO.domain;
+package OOP.AULA4.src.EXERCICIO.entity;
 
 import java.util.List;
 
 public class Restaurante {
+    private static int ultimoRestaurante=0;
+    private Integer identificadorRestaurante;
     private String nomeRestaurante;
     private String endereco;
     private List<Pratos> pratos;
 
-    public Restaurante(String nomeRestaurante, String endereco, List<Pratos> pratos) {
+    public Restaurante(int identificadorRestaurante, String nomeRestaurante, String endereco, List<Pratos> pratos) {
+        this.identificadorRestaurante = identificadorRestaurante;
         this.nomeRestaurante = nomeRestaurante;
         this.endereco = endereco;
         this.pratos = pratos;
+    }
+
+    public Integer getIdentificadorRestaurante() {
+        return identificadorRestaurante;
+    }
+
+    public void setIdentificadorRestaurante(Integer identificadorRestaurante) {
+        this.identificadorRestaurante = identificadorRestaurante;
     }
 
     public String getNomeRestaurante() {
