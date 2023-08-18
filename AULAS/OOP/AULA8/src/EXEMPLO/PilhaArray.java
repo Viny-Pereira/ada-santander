@@ -6,7 +6,7 @@ public class PilhaArray extends Pilha {
     private final Object[] array;
     private int posicao;
 
-    public PilhaArray(Object[] array) {
+    public PilhaArray() {
         this.array = new Object[10];
     }
 
