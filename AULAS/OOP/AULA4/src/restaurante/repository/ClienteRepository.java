@@ -26,6 +26,15 @@ public class ClienteRepository {
         return null;
     }
 
+    public Cliente buscarPrato(Integer identificador, String nome) {
+        for (Cliente cliente : clienteRestaurante) {
+            if (cliente.getIdentificadorCliente().equals(identificador) || cliente.getNomeCliente().equals(nome)) {
+                return cliente;
+            }
+        }
+        return null;
+    }
+
     public List<Cliente> listarPratos() {
         return new ArrayList<>(clienteRestaurante);
     }

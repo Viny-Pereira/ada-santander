@@ -32,6 +32,10 @@ public class ClienteService {
         }
     }
 
+    public Cliente buscarPrato(Integer identificadorPrato, String nomePrato) {
+        return clienteRepository.buscarPrato(identificadorPrato, nomePrato);
+    }
+
     public List<Pedido> verPedidosClientes(String nomeCliente, Integer identificadorCliente) {
         Cliente cliente = clienteRepository.buscarCliente(nomeCliente, identificadorCliente);
         if (cliente != null) {

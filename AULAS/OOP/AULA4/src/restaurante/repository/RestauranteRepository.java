@@ -1,5 +1,6 @@
 package OOP.AULA4.src.restaurante.repository;
 
+import OOP.AULA4.src.restaurante.entity.Pratos;
 import OOP.AULA4.src.restaurante.entity.Restaurante;
 
 import java.util.ArrayList;
@@ -22,6 +23,14 @@ public class RestauranteRepository {
             if (restaurante.getNomeRestaurante().equals(nomeRestaurante) && restaurante.getIdentificadorRestaurante().equals(identificadorRestaurante)) {
                 return restaurante;
             }
+        }
+        return null;
+    }
+
+    public List<Pratos> listarPratosRestaurante(String nomePratos, Integer identificadorPratos) {
+        Restaurante restaurante = buscarRestaurante(nomePratos, identificadorPratos);
+        if (restaurante != null) {
+            return restaurante.getPratos();
         }
         return null;
     }

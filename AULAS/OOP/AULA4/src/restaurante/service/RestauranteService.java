@@ -33,7 +33,7 @@ public class RestauranteService {
         }
     }
 
-    public List<Pedido> listarPratosRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
+    public List<Pedido> listarPedidosRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
         Restaurante restaurante = restauranteRepository.buscarRestaurante(nomeRestaurante, identificadorRestaurante);
         if(restaurante!=null){
             return pedidoRepository.stream()
@@ -42,6 +42,10 @@ public class RestauranteService {
         }
         return null;
     }
+    public List<Pratos> listarPratosRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
+        return restauranteRepository.listarPratosRestaurante(nomeRestaurante, identificadorRestaurante);
+    }
+
 
     public void addPedido(Pedido pedido){
         pedidoRepository.add(pedido);

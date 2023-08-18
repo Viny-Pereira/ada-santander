@@ -3,14 +3,21 @@ package OOP.AULA4.src.restaurante.entity;
 import java.util.List;
 
 public class Restaurante {
-    private static int ultimoRestaurante=0;
+    private static int ultimoRestaurante = 0;
     private Integer identificadorRestaurante;
     private String nomeRestaurante;
     private String endereco;
     private List<Pratos> pratos;
 
-    public Restaurante(int identificadorRestaurante, String nomeRestaurante, String endereco, List<Pratos> pratos) {
-        this.identificadorRestaurante = identificadorRestaurante;
+
+    public Restaurante(String nomeRestaurante, String endereco) {
+        this.identificadorRestaurante = ++ultimoRestaurante;
+        this.nomeRestaurante = nomeRestaurante;
+        this.endereco = endereco;
+    }
+
+    public Restaurante(String nomeRestaurante, String endereco, List<Pratos> pratos) {
+        this.identificadorRestaurante = ++ultimoRestaurante;
         this.nomeRestaurante = nomeRestaurante;
         this.endereco = endereco;
         this.pratos = pratos;
