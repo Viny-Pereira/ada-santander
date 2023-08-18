@@ -40,4 +40,15 @@ public class ArrayLista extends Lista {
         this.array = novoArray;
     }
 
+    public void remove(int index){
+        if(index<0 || index >=size){
+            throw new IndexOutOfBoundsException("Possição inválida");
+        }
+        for (int i = index; i<size-1;i++){
+            array[i] = array[i+1];
+        }
+        array[size-1]=null;
+        size--;
+    }
+
 }
