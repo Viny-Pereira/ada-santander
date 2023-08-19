@@ -13,49 +13,49 @@ public class RestauranteService {
     private RestauranteRepository restauranteRepository;
     private List<Pedido> pedidoRepository;
 
-    public RestauranteService(RestauranteRepository restauranteRepository){
+
+    public RestauranteService(RestauranteRepository restauranteRepository) {
         this.restauranteRepository = restauranteRepository;
         this.pedidoRepository = new ArrayList<>();
     }
 
-    public void cadastrarRestaurante(Restaurante restaurante){
+    public void cadastrarRestaurante(Restaurante restaurante) {
         restauranteRepository.addRestaurante(restaurante);
     }
 
-    public List<Restaurante> listarRestaurantes(){
+    public List<Restaurante> listarRestaurantes() {
         return restauranteRepository.listarRestaurantes();
     }
 
-    public void addPrato(String nomeRestaurante, Pratos prato, Integer identificadorRestaurante){
+    public void addPrato(String nomeRestaurante, Pratos prato, Integer identificadorRestaurante) {
         Restaurante restaurante = restauranteRepository.buscarRestaurante(nomeRestaurante, identificadorRestaurante);
-        if (restaurante!=null){
+        if (restaurante != null) {
             restaurante.getPratos().add(prato);
         }
     }
 
-    public List<Pedido> listarPedidosRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
+    public List<Pedido> listarPedidosRestaurante(String nomeRestaurante, Integer identificadorRestaurante) {
         Restaurante restaurante = restauranteRepository.buscarRestaurante(nomeRestaurante, identificadorRestaurante);
-        if(restaurante!=null){
+        if (restaurante != null) {
             return pedidoRepository.stream()
                     .filter(pedido -> pedido.getRestaurante().equals(restaurante))
                     .collect(Collectors.toList());
         }
         return null;
     }
-    public List<Pratos> listarPratosRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
+
+    public List<Pratos> listarPratosRestaurante(String nomeRestaurante, Integer identificadorRestaurante) {
         return restauranteRepository.listarPratosRestaurante(nomeRestaurante, identificadorRestaurante);
     }
 
 
-    public void addPedido(Pedido pedido){
+    public void addPedido(Pedido pedido) {
         pedidoRepository.add(pedido);
     }
 
-    public Restaurante buscarRestaurante(String nomeRestaurante, Integer identificadorRestaurante){
+    public Restaurante buscarRestaurante(String nomeRestaurante, Integer identificadorRestaurante) {
         return restauranteRepository.buscarRestaurante(nomeRestaurante, identificadorRestaurante);
     }
-
-
 
 
 }

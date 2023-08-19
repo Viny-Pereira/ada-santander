@@ -1,9 +1,7 @@
 package OOP.AULA4.src.restaurante.service;
 
 
-import OOP.AULA4.src.restaurante.entity.Cliente;
 import OOP.AULA4.src.restaurante.entity.Pedido;
-import OOP.AULA4.src.restaurante.entity.Restaurante;
 import OOP.AULA4.src.restaurante.repository.PedidoRepository;
 
 import java.util.List;

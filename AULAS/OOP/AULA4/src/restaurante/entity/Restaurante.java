@@ -1,5 +1,6 @@
 package OOP.AULA4.src.restaurante.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Restaurante {
@@ -14,6 +15,7 @@ public class Restaurante {
         this.identificadorRestaurante = ++ultimoRestaurante;
         this.nomeRestaurante = nomeRestaurante;
         this.endereco = endereco;
+        this.pratos = new ArrayList<>();
     }
 
     public Restaurante(String nomeRestaurante, String endereco, List<Pratos> pratos) {
@@ -57,10 +59,9 @@ public class Restaurante {
 
     @Override
     public String toString() {
-        return "Restaurante{" +
-                "nomeRestaurante='" + nomeRestaurante + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", pratos=" + pratos +
-                '}';
+        return "ID: " + identificadorRestaurante +
+                "\nRestaurante: " + nomeRestaurante +
+                "\nEndereco: " + endereco +
+                "\nPratos: " + pratos;
     }
 }

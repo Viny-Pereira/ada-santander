@@ -45,4 +45,13 @@ public class Pratos {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    @Override
+    public String toString() {
+        return
+                "ID: " + identificadorPrato +
+                "\nNome do Prato: " + nomePrato +
+                "\nPreco do Prato: " + precoPrato +
+                "\nDescricao: " + descricao+"\n";
+    }
 }

@@ -14,11 +14,18 @@ public class ClienteService {
     private PedidoService pedidoService;
     private List<Pedido> pedidoBanco;
 
+    public ClienteService() {
+    }
+
     public ClienteService(ClienteRepository clienteRepository, RestauranteService restauranteService, PedidoService pedidoService) {
         this.clienteRepository = clienteRepository;
         this.restauranteService = restauranteService;
         this.pedidoService = pedidoService;
         this.pedidoBanco = pedidoService.listarPedidos();
+    }
+
+    public void adicionarCliente(Cliente cliente) {
+        clienteRepository.adicionarCliente(cliente);
     }
 
     public void fazerPedido(String nomeCliente, Integer identificadorCliente, String nomeRestaurante, Integer identificadorRestaurante, List<Pratos> pratos, String endereco) {
