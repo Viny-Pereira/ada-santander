@@ -10,12 +10,14 @@ import tech.ada.ecommerce.model.Cliente;
 import java.security.UnresolvedPermission;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
 
 
     List<Cliente> findByAtivo(boolean ativo);
+    Optional<Cliente> findByEmail(String email);
 
     @Query("SELECT c FROM Cliente c WHERE c.nomeCompleto ILIKE concat('%', :nome,'%') ORDER BY c.nomeCompleto")
     List<Cliente> findByNomeCompletoCustom(@Param("nome") String nome);
