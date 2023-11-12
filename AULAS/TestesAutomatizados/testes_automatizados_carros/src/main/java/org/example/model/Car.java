@@ -50,8 +50,14 @@ public class Car {
         this.active = true;
     }
 
-    public void powerOff() {
-        this.active = false;
+    public void powerOff() throws Exception {
+        if (this.active){
+            if (this.actualVelocity==0){
+                this.active = false;
+            }else{
+                throw new Exception("Cannot turn off a car with velocity");
+            }
+        }
     }
 
     public void lock(){
@@ -71,10 +77,10 @@ public class Car {
 
 
     public void speedUp(Integer addVelocity) throws Exception {
-        if (addVelocity<0){
-            throw new Exception("The additional velocity cannot be less than zero");
-        }
         if (this.active) {
+            if (addVelocity<0){
+                throw new Exception("The additional velocity cannot be less than zero");
+            }
             if (this.actualVelocity + addVelocity <= this.maxVelocity)
                 this.actualVelocity += addVelocity;
         }
@@ -90,65 +96,45 @@ public class Car {
         }
     }
 
+
     public String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 
     public String getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public String getModel() {
         return model;
     }
 
-    public void setModel(String model) {
-        this.model = model;
-    }
 
     public Boolean getActive() {
         return active;
     }
 
-    public void setActive(Boolean active) {
-        this.active = active;
-    }
 
     public Integer getActualVelocity() {
         return actualVelocity;
     }
 
-    public void setActualVelocity(Integer actualVelocity) {
-        this.actualVelocity = actualVelocity;
-    }
 
     public Integer getMaxVelocity() {
         return maxVelocity;
     }
 
-    public void setMaxVelocity(Integer maxVelocity) {
-        this.maxVelocity = maxVelocity;
-    }
 
     public Boolean getLocked() {
         return locked;
     }
 
-    public void setLocked(Boolean locked) {
-        this.locked = locked;
-    }
 
     @Override
     public String toString() {
-        return "active=" + active;
+        return "active = " + active;
     }
 
     @Override
