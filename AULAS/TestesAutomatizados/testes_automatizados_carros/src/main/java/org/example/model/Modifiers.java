@@ -6,12 +6,12 @@ public class Modifiers {
     // protected/
     // default
     // private
-/*
+
 
     public void publicTest() {
         // todos podem acessa
     }
-
+/*
     protected void protectedTest() {
         // propria classe, subclasse, mesmo pacote
     }

@@ -1,5 +1,8 @@
 package org.example.model;
 
+import org.example.exception.SpeedUpNegativeException;
+import org.example.exception.TurnOffCarWithVelocity;
+
 import java.util.Objects;
 
 public class Car {
@@ -55,7 +58,7 @@ public class Car {
             if (this.actualVelocity==0){
                 this.active = false;
             }else{
-                throw new Exception("Cannot turn off a car with velocity");
+                throw new TurnOffCarWithVelocity("Cannot turn off a car with velocity");
             }
         }
     }
@@ -79,7 +82,7 @@ public class Car {
     public void speedUp(Integer addVelocity) throws Exception {
         if (this.active) {
             if (addVelocity<0){
-                throw new Exception("The additional velocity cannot be less than zero");
+                throw new SpeedUpNegativeException("The additional velocity cannot be less than zero");
             }
             if (this.actualVelocity + addVelocity <= this.maxVelocity)
                 this.actualVelocity += addVelocity;

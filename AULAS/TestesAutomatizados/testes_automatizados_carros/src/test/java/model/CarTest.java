@@ -1,10 +1,10 @@
 package model;
 
+import org.example.exception.SpeedUpNegativeException;
+import org.example.exception.TurnOffCarWithVelocity;
 import org.example.model.Car;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.Test;
-
-import javax.swing.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -248,7 +248,7 @@ public class CarTest {
         car.powerOn();
 
         Throwable throwable =                               // runnable
-                Assertions.assertThrows(Exception.class, () -> car.speedUp(-10));
+                Assertions.assertThrows(SpeedUpNegativeException.class, () -> car.speedUp(-10));
 
         assertEquals("The additional velocity cannot be less than zero", throwable.getMessage());
     }
@@ -301,7 +301,7 @@ public class CarTest {
         Car car = new Car();
         car.powerOn();
         car.speedUp(10);
-        Throwable throwable = Assertions.assertThrows(Exception.class, car::powerOff);
+        Throwable throwable = Assertions.assertThrows(TurnOffCarWithVelocity.class, car::powerOff);
         assertEquals("Cannot turn off a car with velocity", throwable.getMessage());
     }
     @Test
