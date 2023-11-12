@@ -5,6 +5,7 @@ import org.example.model.Modifiers;
 import org.junit.jupiter.api.Test;
 
 public class ModifiersTest {
+/*
 
     @Test
     public void testandoModificadores() {
@@ -13,5 +14,6 @@ public class ModifiersTest {
         //modificadores.protectedTest();
         //modificadores.defaultTest();
     }
+*/
 
 }

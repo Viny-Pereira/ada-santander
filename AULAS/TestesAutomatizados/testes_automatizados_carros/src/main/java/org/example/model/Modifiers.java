@@ -6,6 +6,7 @@ public class Modifiers {
     // protected/
     // default
     // private
+/*
 
     public void publicTest() {
         // todos podem acessa
@@ -22,5 +23,6 @@ public class Modifiers {
     private void privateTest() {
 
     }
+*/
 
 }

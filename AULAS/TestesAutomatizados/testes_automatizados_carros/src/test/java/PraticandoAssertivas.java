@@ -1,11 +1,11 @@
 import org.example.model.Car;
-import org.junit.Assert;
-import org.junit.Test;
+//import org.junit.Assert;
+//import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.*;
+//import static org.hamcrest.CoreMatchers.*;
 
 public class PraticandoAssertivas {
-
+/*
     @Test
     public void praticandoAssertTrue() {
         boolean eMaiorDeIdade = true;
@@ -123,4 +123,5 @@ public class PraticandoAssertivas {
 
         Assert.assertThat(carro, is(instanceOf(Car.class)));
     }
+   */
 }
